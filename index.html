@@ -14,20 +14,69 @@
     <div id="login-area" >
         <h2 class="text-center">Welcome to Digital  Bank</h2>
         <div class="submit-area">
-            <h4>Login</h4>
+            <h5>Login</h5>
             <input type="text" class="form-control" placeholder="Enter your email"><br>
             <input type="password" class="form-control" placeholder="password"><br>
             <button id="login" class="btn btn-success">Enter</button>
         </div>
     </div>
+    <div id="transaction-area">
+    
+        <div class="row">
+            <div class="col-md-4">
+                <div class="deposit status">
+                    <h5>Deposit</h5>
+                    <h2>$ 00</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="withdraw status">
+                    <h5>Withdraw</h5>
+                    <h2>$00</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="balance status">
+                    <h5>Balance</h5>
+                    <h2>$1000</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="submit-area">
+                    <h5>Deposit</h5>
+                    <br>
+                    <input class="form-control" type="text" placeholder="Enter amount you want to deposit">
+                    <br>
+                    <button class="btn btn-success">Deposit</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="submit-area">
+                    <h5>Withdraw</h5><br>
+                    <input class="form-control" type="text" placeholder="Enter amount you want to withdraw"><br>
+                    <button class="btn btn-success">Withdraw</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
+        const loginBtn = document.getElementById('login');
+        loginBtn.addEventListener("click", function(){
+            const loginArea = document.getElementById('login-area');
+            loginArea.style.display = "none";
+            
+            const transactionArea = document.getElementById("transaction-area");
+            transactionArea.style.display="block"
+        })
         
     </script>
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh5U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
